@@ -34,8 +34,9 @@ void acceptTask(Task *task) {
 	
 	printf("Choose task type\tRegular (R)\tToday (T)\n");
 	ch_type = getch();
+	ch_type = tolower(ch_type);
 
-	if(ch_type=='R' || ch_type=='r') {
+	if(ch_type=='r') {
 		task->taskType = regular;
 	} else {
 		task->taskType = today;

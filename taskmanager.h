@@ -18,6 +18,7 @@ void saveTasks(TaskManager *taskManager) {
 	FILE *taskFile;
 	int i;
 
+	taskFile = NULL;
 	taskFile = fopen("taskFile.dat","w");
 	if(taskFile != NULL) {
 		for(i=0;i<taskManager->rt_size;i++) {
@@ -31,6 +32,7 @@ void saveTasks(TaskManager *taskManager) {
 		fclose(taskFile);
 	} else {
 		printf("Unable to save todo tasks\n");
+		getch();
 	}
 }
 
@@ -42,6 +44,7 @@ void loadTasks(TaskManager *taskManager) {
 
 	taskManager->rt_size = taskManager->tt_size = 0;
 
+	taskFile = NULL;
 	taskFile = fopen("taskFile.dat","r");
 	if(taskFile != NULL) {
 		i = j = 0;
