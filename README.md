@@ -24,7 +24,7 @@ Follow the instruction on the website to setup the compiler. It works on windows
 
 ## Versioning
 
-We use manual versioning system for this project. The latest project version is v1.0.1. 
+We use manual versioning system for this project. The latest project version is v1.1. 
 
 
 ## License
