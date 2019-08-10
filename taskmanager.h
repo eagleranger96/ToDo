@@ -60,7 +60,7 @@ void loadTasks(TaskManager *taskManager) {
 				i++;
 			} else {
 				getCurrentDateTime(&currentTime);
-				if(!isDiffDay(&tempTask.dateTime, &currentTime) || !tempTask.done) {
+				if(!isDiffDay(&tempTask.dateTime, &currentTime) || tempTask.done) {
 					taskManager->todaysTasks[j] = tempTask;
 					j++;
 				}
